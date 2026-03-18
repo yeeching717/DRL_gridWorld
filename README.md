@@ -1,5 +1,7 @@
 # Grid World Lab
 
+Demo: https://ca3bffa1-9a53-4daf-bfc2-a2603efe3aaf-00-380cywq22a85i.pike.replit.dev/
+
 這是一個可互動的 Grid World 視覺化小專案，使用原生 HTML、CSS、JavaScript 實作，功能包含地圖編輯、隨機策略評估與價值迭代求最佳策略。
 
 ## 功能總覽
@@ -29,17 +31,6 @@
 - style.css：介面樣式與格子視覺設計。
 - script.js：Grid World 邏輯、策略評估、價值迭代、最佳路徑推導。
 
-## 本機執行方式
-
-方法 A（直接開啟）
-- 直接雙擊 index.html。
-
-方法 B（本機靜態伺服器，建議）
-- 在專案目錄執行：
-  python -m http.server 8000
-- 瀏覽器開啟：
-  http://localhost:8000
-
 ## 操作流程
 
 1. 設定 n 並建立地圖。
@@ -53,23 +44,6 @@
 - 一般步驟回饋 step reward：-1
 - 抵達終點回饋 goal reward：20
 - 收斂門檻 theta：1e-4
-
-## Replit 部署（讓他人可用）
-
-本專案已附上 Replit 設定檔 .replit 與 replit.nix。
-
-快速步驟：
-1. 到 Replit 建立新專案（Import from GitHub 或 Upload files 都可）。
-2. 把整個 DRL_HW11 資料夾內容上傳（包含 .replit 與 replit.nix）。
-3. 點 Run，系統會啟動靜態伺服器並開啟網頁。
-4. 點右上角 Deploy。
-5. 選擇 Static 或 Autoscale Web Deployment（任一可用）。
-6. 完成後取得公開網址，分享給其他人。
-
-若你使用 GitHub 匯入，建議流程：
-1. 把目前專案 push 到 GitHub。
-2. 在 Replit 選 Import from GitHub。
-3. 匯入後直接 Run 與 Deploy。
 
 ## 常見問題
 
