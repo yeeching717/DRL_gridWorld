@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid World Value Iteration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="panel">
+      <h1>Grid World Lab</h1>
+      <p class="subtitle">互動式網格地圖、策略評估與價值迭代</p>
+
+      <div class="control-block">
+        <label for="gridSize">網格大小 n（5~9）</label>
+        <div class="inline">
+          <input id="gridSize" type="number" min="5" max="9" value="5" />
+          <button id="buildGridBtn">建立地圖</button>
+        </div>
+      </div>
+
+      <div class="control-block">
+        <span>編輯模式</span>
+        <div class="mode-group" role="radiogroup" aria-label="編輯模式">
+          <label><input type="radio" name="mode" value="start" checked /> 起點</label>
+          <label><input type="radio" name="mode" value="goal" /> 終點</label>
+          <label><input type="radio" name="mode" value="obstacle" /> 障礙物</label>
+          <label><input type="radio" name="mode" value="erase" /> 清除</label>
+        </div>
+      </div>
+
+      <div class="control-block">
+        <div class="inline wrap">
+          <button id="randomPolicyBtn">隨機策略 + 策略評估</button>
+          <button id="valueIterationBtn">價值迭代找最佳策略</button>
+          <button id="resetBtn" class="ghost">重置內容</button>
+        </div>
+      </div>
+
+      <div class="legend">
+        <div><span class="swatch start"></span>起點</div>
+        <div><span class="swatch goal"></span>終點</div>
+        <div><span class="swatch obstacle"></span>障礙物</div>
+      </div>
+
+      <div id="status" class="status" aria-live="polite"></div>
+      <div id="metrics" class="metrics"></div>
+
+      <div class="matrix-panels">
+        <section class="matrix-card">
+          <h2>Policy Matrix</h2>
+          <pre id="policyMatrix" class="matrix-view"></pre>
+        </section>
+        <section class="matrix-card">
+          <h2>Value Matrix</h2>
+          <pre id="valueMatrix" class="matrix-view"></pre>
+        </section>
+      </div>
+    </section>
+
+    <section class="grid-wrap">
+      <div id="grid" class="grid" aria-label="Grid World 地圖"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
