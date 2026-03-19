@@ -1,6 +1,6 @@
 # Grid World Lab
 
-Demo: https://ca3bffa1-9a53-4daf-bfc2-a2603efe3aaf-00-380cywq22a85i.pike.replit.dev/
+Demo: https://yeeching717.github.io/DRL_gridWorld/
 
 這是一個可互動的 Grid World 視覺化小專案，使用原生 HTML、CSS、JavaScript 實作，功能包含地圖編輯、隨機策略評估與價值迭代求最佳策略。
 
